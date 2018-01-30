@@ -1,0 +1,87 @@
+To install the git
+******************
+sudo apt get install git-core
+sudo apt-get install git-doc
+sudo apt-get install git-svn
+sudo apt-get build-dep git-core git-doc git-svn
+
+if the above commands are failed, use
+*************************************
+sudo apt-get update
+sudo apt-get build-dep git-core git-doc git-svn
+
+*******for configure git (Global)*******
+git config --global user.name "sruthi"
+git config --global user.email "sruthirajan444@gmail.com"
+
+For a specific repository
+*************************
+cd /home/mca/Desktop/sruthisd/sru 
+mkdir sruuu
+cd sruuu
+git init //initialize git
+Initialized empty Git repository in /home/mca/Desktop/sruthisd/sru/sruuu/.git/
+
+git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd/sru/sruuu$ 
+
+
+
+
+
+git config user.name "sru"
+
+ git config --global  color.ui auto
+
+30/01/2018
+----------
+mkdir sruuu
+cd /home/mca/Desktop/sruthisd/sru/sruuu
+git init
+ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+cd
+ cd /home/mca/Desktop/sruthisd 
+ git init
+Initialized empty Git repository in /home/mca/Desktop/sruthisd/.git/
+git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	aaa/
+	exp2.txt~
+	name.sh
+	pgm1.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+git add .
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git commit -m "welcome"
+[master (root-commit) 5e36682] welcome
+ 4 files changed, 49 insertions(+)
+ create mode 160000 aaa
+ create mode 100644 exp2.txt~
+ create mode 100644 name.sh
+ create mode 100644 pgm1.sh
+
+ git status
+On branch master
+nothing to commit, working directory clean
+
+Desktop/sruthisd/sru/sruuuview->show hidden->.git
+
+
+
