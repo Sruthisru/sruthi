@@ -1,30 +1,30 @@
-To install the git
-******************
-sudo apt get install git-core
-sudo apt-get install git-doc
-sudo apt-get install git-svn
-sudo apt-get build-dep git-core git-doc git-svn
+	To install the git
+	******************
+-sudo apt get install git-core
+-sudo apt-get install git-doc
+-sudo apt-get install git-svn
+-sudo apt-get build-dep git-core git-doc git-svn
 
-if the above commands are failed, use
-*************************************
-sudo apt-get update
-sudo apt-get build-dep git-core git-doc git-svn
+	If the above commands are failed, use
+	*************************************
+-sudo apt-get update
+-sudo apt-get build-dep git-core git-doc git-svn
 
-*******for configure git (Global)*******
-git config --global user.name "sruthi"
-git config --global user.email "sruthirajan444@gmail.com"
+	For configure git (Global)
+	**************************
+-git config --global user.name "sruthi"
+-git config --global user.email "sruthirajan444@gmail.com"
 
-For a specific repository
-*************************
-cd /home/mca/Desktop/sruthisd/sru 
-mkdir sruuu
-cd sruuu
-git init //initialize git
-Initialized empty Git repository in /home/mca/Desktop/sruthisd/sru/sruuu/.git/
+	For a specific repository
+	*************************
+-cd /home/mca/Desktop/sruthisd/sru 
+-mkdir sruuu
+-cd sruuu
+-git init //This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton
+	  //Initialized empty Git repository in /home/mca/Desktop/sruthisd/sru/sruuu/.git/
 
-git status
+-git status
 On branch master
-
 Initial commit
 
 nothing to commit (create/copy files and use "git add" to track)
@@ -34,9 +34,193 @@ mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd/sru/sruuu$
 
 
 
-git config user.name "sru"
+-git config user.name "sru"
 
- git config --global  color.ui auto
+-git config --global  color.ui auto
+
+30/01/2018
+----------
+mkdir sruuu
+-cd /home/mca/Desktop/sruthisd/sru/sruuu
+-git init
+- git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+-cd
+ -cd /home/mca/Desktop/sruthisd 
+ -git init
+Initialized empty Git repository in /home/mca/Desktop/sruthisd/.git/
+-git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	aaa/
+	exp2.txt~
+	name.sh
+	pgm1.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+-git add .
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git commit -m "welcome"
+[master (root-commit) 5e36682] welcome
+ 4 files changed, 49 insertions(+)
+ create mode 160000 aaa
+ create mode 100644 exp2.txt~
+ create mode 100644 name.sh
+ create mode 100644 pgm1.sh
+
+ -git status
+On branch master
+nothing to commit, working directory clean
+
+Desktop/sruthisd/sru/sruuuview->show hidden->.git
+
+vi name.sh
+edit the name.sh file
+esc->shift+:->wq
+- git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   name.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	exp2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vi pgm1.sh
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   name.sh(red color)
+	modified:   pgm1.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	exp2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ -git add -u
+-git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   name.sh(((green color)
+	modified:   pgm1.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	exp2.txt
+
+ -git add exp2.txt
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   exp2.txt
+	modified:   name.sh
+	modified:   pgm1.sh
+
+	Commit with message
+	*******************
+-git commit -m "welcome"
+[master d4d4fb5] welcome
+ 3 files changed, 98 insertions(+), 2 deletions(-)
+create mode 100644 exp2.txt
+
+	To clone a repository
+	*********************
+* git clone https://github.com/EduardoAC/zally
+* git clone https://github.com/EduardoAC/Sharon
+Cloning into 'Sharon'...
+(instead of getting just a working copy, Git receives a full copy of nearly all data that the server has. Every version of every file for the history of the project is pulled down by default when you run git clone)
+
+
+
+	To move a file to a folder
+	**************************
+git mv sam.txt ss
+git add exp2.txt
+git mv exp2.txt sru/sruuu
+
+	To move a folder to a folder
+	****************************
+mv ss sru
+
+
+	To delete file
+	**************
+rm sam.txt
+rm name.sh
+
+	To delete dierctory
+	*******************
+rm -r ww
+	Remove
+        ******
+
+*cd ff
+*nano f1.txt
+*cd ..
+*git add .
+warning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',
+whose behaviour will change in Git 2.0 with respect to paths you removed.
+Paths like 'sruuu' that are
+removed from your working tree are ignored with this version of Git.
+
+* 'git add --ignore-removal <pathspec>', which is the current default,
+  ignores paths you removed from your working tree.
+
+* 'git add --all <pathspec>' will let you also record the removals.
+
+Run 'git status' to check the paths you removed from your working tree.
+
+*git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Sharon
+	modified:   exp2.txt
+	modified:   exp2.txt~
+	new file:   ff/f1.txt
+	deleted:    sam.txt
+	new file:   sru/sruuu/exp2.txt
+	new file:   zally
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    sruuu
+
+* git rm -r ff 
+error: the following file has changes staged in the index:
+    ff/f1.txt
+(use --cached to keep the file, or -f to force removal)
+* git rm -r ff -f
+rm 'ff/f1.txt'
+
+
 
 
 
