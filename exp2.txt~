@@ -223,4 +223,92 @@ rm 'ff/f1.txt'
 
 
 
+	BRANCH
+	******
+	To view all branches
+	********************
+git branch -a
+* master
+
+	To create new branch
+	********************
+git branch ammu
+	To view remote branches
+	***********************
+cd Sharon
+git branch -r  
+origin/HEAD -> origin/master
+origin/add-webconnection
+origin/create-video-player
+origin/master
+
+git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/add-webconnection
+  remotes/origin/create-video-player
+  remotes/origin/master
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd/Sharon$ cd ..
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git branch -a
+  ammu
+* master
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git checkout ammu
+A	Sharon
+M	exp2.txt
+M	exp2.txt~
+D	sam.txt
+A	sru/sruuu/exp2.txt
+D	sruuu
+A	zally
+Switched to branch 'ammu'
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git branch -a
+* ammu
+  master
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git checkout master
+A	Sharon
+M	exp2.txt
+M	exp2.txt~
+D	sam.txt
+A	sru/sruuu/exp2.txt
+D	sruuu
+A	zally
+Switched to branch 'master'
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git branch -a
+  ammu
+* master
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ 
+ git branch -a
+  ammu
+* master
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ nano sam.txt
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git add .
+warning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',
+whose behaviour will change in Git 2.0 with respect to paths you removed.
+Paths like 'sruuu' that are
+removed from your working tree are ignored with this version of Git.
+
+* 'git add --ignore-removal <pathspec>', which is the current default,
+  ignores paths you removed from your working tree.
+
+* 'git add --all <pathspec>' will let you also record the removals.
+
+Run 'git status' to check the paths you removed from your working tree.
+
+mca@mca-HP-Compaq-8200-Elite-MT-PC:~/Desktop/sruthisd$ git commit -m "welcome"
+[master 0d602d4] welcome
+ 7 files changed, 559 insertions(+), 80 deletions(-)
+ create mode 160000 Sharon
+ rewrite exp2.txt~ (79%)
+ create mode 100644 sru/sruuu/exp2.txt
+ create mode 160000 test
+ create mode 160000 zally
+ git branch -a
+  ammu
+* master
+  sample
+
+
+
+
+
 
